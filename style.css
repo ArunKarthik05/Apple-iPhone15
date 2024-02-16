@@ -1,0 +1,154 @@
+html{
+    font-size: 10px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.float-nav{
+    position: fixed;
+    /* background-color: red; */
+    top:-50px;
+    width: 100%; 
+    padding: 1.2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom:1px solid lightgray;
+    transition: all 0.3s ease;
+    animation: slideIn 2s forwards; /* Animation for sliding in */
+    animation-delay: 0.2s;
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/*-------- GLASSY--------- */
+.float-nav{
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.2)
+    );
+    backdrop-filter: blur(2rem);
+    z-index: 1;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.float-nav-left{
+    margin-left: 10%;
+}
+.float-nav-left a{
+    color: black;
+    font-size: 22px;
+    font-weight: 550;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Arial, Helvetica, sans-serif;;
+}
+.float-nav-right button{
+    height: 25px !important;
+    padding: 0.2rem;
+    border-radius: 15px;
+    font-size: 0.8;
+    width: 50px !important;
+    background-color: #0071E3;
+    border: none;
+    color: white;
+}
+.is-active{
+    color: gray !important;
+}
+.float-nav-right{
+    margin-left: 40%;
+}
+.float-nav-right a{
+    cursor: pointer;
+    color: black;
+    margin-right: 15px;
+}
+.navbar{
+    margin-left: 10%; 
+   /* background-color: rebeccapurple; */
+}
+nav{
+    font-family: "SF Pro Text";
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color: rgb(54, 52, 52);
+}
+.logo-container{
+    height: 40px;
+    height: 40px;
+    overflow: hidden;
+    /* background-color: orange; */
+}
+.nav-logo{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+}
+.nav-img{
+    background-position: center;   
+}
+nav ul{
+    /* background-color: red; */
+    list-style-type: none;
+    overflow: hidden;
+}
+nav li{
+    display: inline;
+}
+nav ul li {
+    margin-left: 30px;
+    /* background-color: beige; */
+}
+#search , #bag{
+    /* background-color: red; */
+    color: rgb(153, 142, 142);
+    font-size: 2rem;
+}
+.emi-bar{
+    margin-top: -15px;
+    min-height: 40px;
+    background-color: #F5F5F7;
+    font-size: 1.5rem;
+}
+.emi-p{    /* background-color: yellow; */
+    margin-left: 25%;
+    padding: 10px;
+}   
+.emi-p a{
+    text-decoration: none;
+    color: rgb(32, 84, 114);
+}
+.vid-container{
+    margin:100px 0 0 0;
+   /* background-color: red; */
+}
+.buy-div button{
+    margin-left: 45%;
+    margin-top: 5%;
+    border: none;
+    width: 70px;
+    background-color: #0071E3;
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+.buy-p{
+    margin-top: 40px;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+}
