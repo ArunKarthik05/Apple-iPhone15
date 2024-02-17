@@ -10,6 +10,7 @@ a{
 }
 
 .float-nav{
+    z-index: 5 !important;
     position: fixed;
     /* background-color: red; */
     top:-50px;
@@ -35,10 +36,10 @@ a{
 .float-nav{
     background: linear-gradient(
         to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
+        rgba(231, 231, 231, 0.945),
+        rgba(121, 120, 120, 0.2)
     );
-    backdrop-filter: blur(2rem);
+    backdrop-filter: blur(6rem);
     z-index: 1;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
@@ -71,6 +72,10 @@ a{
     cursor: pointer;
     color: black;
     margin-right: 15px;
+    transition: color 0.3s ease;
+}
+.float-nav-right a:hover{
+    color: blue;
 }
 .navbar{
     margin-left: 10%; 
@@ -151,4 +156,251 @@ nav ul li {
     font-size: 21px;
     font-weight: 600;
     text-align: center;
+}
+/* --------------------Highlights-------------- */
+.hightlights-header{
+    /* background-color: red; */
+    margin: 3rem;
+    min-width: 80%;
+    margin-top: 15%;
+}
+.hightlights-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    /* background-color: green; */
+}
+.hightlights-left{
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Arial, Helvetica, sans-serif;
+    /* background-color: blue; */
+}
+.hightlights-left h2{
+    font-size: 56px;
+}
+.hightlights-right ul{
+    list-style-type: none;
+    gap: 1rem;
+}
+.hightlights-right a{
+    color: blue;
+    font-size: 21px;
+    font-weight: 500;
+    /* background-color: yellow; */
+}
+.hightlights-right li{
+    display: inline;
+    margin-left: 20px;
+}
+#icons{
+    font-size: 2rem;
+    font-weight: 400;
+}
+/* --------------Slider-DYNAMIC ISLANDS---------------- */
+.slider input{
+
+}
+.slider{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+    /* overflow-x: hidden; */
+}
+.dyi-img-container{
+    font-family: Arial Helvetica, sans-serif;
+    background-color: #F5F5F7;
+    /* background-color: red; */
+    margin: 3rem;
+    padding-top: 6rem;
+    border-radius: 5rem 5rem 5rem 5rem;
+    border-radius: 2rem;
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    min-width: 90vw;
+    overflow: hidden;
+}
+.dyi-img-container.inactive {
+    display: none; 
+}
+.dyi-inner-container-1{
+    position: relative;
+}
+.phone-bg{
+    z-index:1;
+}
+.dyi-slide-1{
+    top: 33.5%;
+    left: 30%;
+    z-index: 1;
+    position: absolute;
+    max-width: 60%;
+    max-height: 100%;
+    border-radius: 7rem 7rem 0 0 ;
+    object-fit: cover; 
+    object-position: left;
+    overflow: hidden;
+}
+.dyi-img-container p{
+    margin-left: 5%;
+    margin-right: 10%;
+    float: left;
+    padding: 5rem;
+    /* background-color: green; */
+}
+/* --------------SLIDE_2---------- */
+.slide-2-p{
+    /* top: 0; */
+    padding: 3rem;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 28px;
+    font-weight: 550;
+}
+.dyi-img-container-2{
+    /* background-color: navy; */
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+.dyi-slide-2{
+    top: 0;
+    z-index: 1;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover; 
+}
+.slide-2{
+    padding: 0 !important;
+    border-radius: 3rem !important;
+    overflow: hidden;
+}
+/* Apply zoom-in animation */
+.dyi-slide-2.zoomInAnimation {
+    /* Set initial size */
+ 
+    animation: zoomIn 6s ease forwards; /* Run the animation for 6 seconds */
+}
+/* Keyframes for zoom-in animation */
+@keyframes zoomIn {
+    0% {
+        transform-origin: top;
+        transform: scale(1); /* Initial scale */
+    }
+    100% {
+        transform-origin: top;
+        transform: scale(2); /* Final scale (zoomed in) */
+    }
+}
+.topleft{
+    position: relative !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-left: 5% !important; 
+    margin-top: 5% !important;
+    color: black !important;
+}
+.slide-3{
+    padding-top: 0 !important;
+}
+/* Keyframes for zoom-out to in animation */
+@keyframes zoomOutIn {
+    0% {
+        transform: scale(1.5); /* Initial scale (zoomed out) */
+    }
+    100% {
+        transform: scale(1); /* Final scale (zoomed in) */
+    }
+}
+
+/* Apply zoom-out to in animation */
+.dyi-slide-4.zoomAnimation {
+    animation: zoomOutIn 3s ease forwards; /* Run the animation for 3 seconds */
+}
+.slide-4{
+    /* background-color: red; */
+    min-width: 95vw;
+    margin: 2rem;
+}
+.model{
+    position: relative;
+    margin-top: 35%;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+}
+.model h1{
+    font-weight: 550;
+}
+.car{
+    position: relative;
+    min-width: 90vw;
+    height: 90vh;
+}
+.car span{
+    padding: 0.4rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.7); /* White color with 50% opacity */
+    position: absolute;
+    bottom: 100px;
+    left: 40%;
+    font-family: "SF Pro Text";
+    font-weight: 500;
+    font-size: 15px;
+}
+.model-section{
+    position: relative;
+}
+.colors {
+    float: top;
+    position: fixed;
+    bottom: 20px;
+    left: 37%;
+    display: flex;
+    max-width: fit-content;
+    border-radius: 2rem;
+    background-color: rgba(211, 205, 205, 0.7); 
+    padding: 1rem;
+}
+.outer-circle{
+    position: relative;
+    z-index:1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: border 0.3s ease-in;
+}
+.abs{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: blue; 
+  border-radius: 50%; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+.color-option {
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    border: 0.3px solid gainsboro;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+} 
+.color-active{
+    border: 1px solid black;
+}
+.img-clr-container{
+    /* background-color: red; */
+    min-height: 100vh;
+    min-width: 100%;
+    display: none;
+}
+.img-clr-container img{
+    margin-left: 37%;
 }
