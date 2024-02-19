@@ -11,7 +11,9 @@
     <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
 </head>
 <body>
-    <div class="float-nav-wrapper" id="float-nav-wrapper">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="float0-nav-wrapper" id="float-nav-wrapper">
         <nav class="float-nav" id="float-nav">
             <div class="float-nav-left"><a href="">iPhone 15</a></div>
             <div class="float-nav-right">
@@ -58,11 +60,11 @@
         </ul>
     </nav>
     <div class="emi-bar">
-        <p class="emi-p">Save ₹5000.00 instantly on iPhone 15 with HDFC Bank Credit Cards.+ Plus No Cost EMI from most leading banks.
+        <span class="emi-p">Save ₹5000.00 instantly on iPhone 15 with HDFC Bank Credit Cards.+ Plus No Cost EMI from most leading banks.
             <a href="">
                 Buy
             </a>
-        </p>
+        </span>
     </div>
     <section class="welcome">
         <div class="vid-container">
@@ -82,18 +84,18 @@
     <header class="hightlights-header">
         <div class="hightlights-wrapper">
             <div class="hightlights-left">
-                <h2 class="spn-text">Get the highlights.</h2>
+                <h2 class="spn-text reveal">Get the highlights.</h2>
             </div>
             <div class="hightlights-right">
                 <ul>
-                    <li><a href=""><span class="spn-text">Watch the film </span>
+                    <li><a href=""><span class="spn-text reveal">Watch the film </span>
                         <span class="material-symbols-outlined" id="icons">
                         play_circle
                         </span>
                         </a>
                     </li>
                     <li><a href="">
-                        <span class="spn-text">Watch the event</span>
+                        <span class="spn-text reveal">Watch the event</span>
                         <span class="material-symbols-outlined" id="icons">
                             chevron_right
                         </span>
@@ -153,20 +155,19 @@
                 </div>
              </div>
         </div>
-        <!-- --------------Radio buttons--------------- -->
+        <!-- --------------Radio buttons---------------
         <input type="radio" name="radio-btn" id="radio1">
         <input type="radio" name="radio-btn" id="radio2">
         <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio4"> -->
     </div>
     <section class="model">
-        <h1>Take a closer look.</h1>
+        <h2 class="reveal">Take a closer look.</h2>
             <div class="img-clr-container" id="Colors">
                 <img src="" alt="" id="colors-img">
             </div>
-            <model-viewer class="car" src="./assets/iphone-15/scene.gltf" alt="truck-3d" shadow-intensity="0.8" auto-rotate camera-controls="orbit" ar>
-                <span>15.54 cm (6.1”) iPhone 151 in five colours
-                </span>
+            <span class="colors-text">15.54 cm (6.1”) iPhone 15 in black</span>
+            <model-viewer class="car" src="./assets/iphone-15/scene.gltf" alt="truck-3d" shadow-intensity="0.8" auto-rotate camera-controls="orbit">
             </model-viewer>
             <div class="colors">  
                 <div class="outer-circle" style="border:2px solid #0D78E4">
@@ -186,8 +187,187 @@
                 </div>
                 
             </div>              
-        </section>
-    
+    </section>
+        <!-- ----------DYI VIDEO SECTION------------- -->
+    <section class="dyi-vid-wrapper">
+        <header>
+            <div class="header-wrapper">
+                <h2 class="reveal">Explore the full story.</h2>
+            </div>
+        </header>
+        <main class="content-container">
+            <div class="content">
+                <div>
+                    <h4 class="content-header reveal">
+                        Dynamic Island.
+                        <br>
+                        For when things<br>just pop up.
+                    </h4>
+                </div>
+                <div class="content-p" style="margin-left: 10px;">
+                    <p class="gray-text reveal">
+                        Dynamic Island <strong class="strong">bubbles up alerts and Live Activities</strong> — so you don’t miss them while you’re doing something else. You can track your next ride, see who’s calling, check your flight status, and so much more.
+                    </p>
+                </div>
+                <div class="DYI-vid-container">
+                    <img src="./assets/videos/DYI-bg.png" alt="DYI-bg" class="DYI-bg">
+                    <div class="DYI-vd-container">
+                        <video autoplay muted src="./assets/videos/AP-Dhillion.mp4" class="video-DYI"></video>
+                    </div>                    
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- -------------Overlapping gray section----------- -->
+    <section class="gray-section">
+        <div class="text-div">
+            <h4>Colour through
+                <br>
+                and through.
+                <br>
+                Tough all around.
+            </h4>
+            <p class="gray-text" style="margin-top: 5%;">
+                The innovative new design features <strong class="strong">back <br> glass that has colour infused throughout <br> the material.</strong> A custom dual-ion exchange <br> process for the glass and an aerospace- <br> grade aluminium enclosure help make <br> iPhone 15 incredibly durable.
+            </p>
+        </div>
+        <div class="gray-section-vc" style="position: relative;margin-left: 10%;margin-top: 10%;">
+            <video autoplay src="./assets/videos/gray-section.mp4" class="gray-video" width="100%" height="100%" ></video>
+        </div>
+
+        <div class="main-icons-container">
+            <div class="inner-icons-container">
+                <div>
+                    <img src="./assets/icons/shield.png" alt="shield">
+                </div>
+                <div>
+                    <p class="gray-text reveal">
+                        <strong class="strong">Dependably durable.</strong>
+                        <br>
+                        The Ceramic Shield
+                        <br>
+                        front is tougher than
+                        <br>
+                        any smartphone glass.
+                    </p>
+                </div>
+            </div>
+            <div class="inner-icons-container">
+                <div>
+                    <img src="./assets/icons/water.png" alt="water">
+                </div>
+                <div>
+                    <p class="gray-text reveal">
+                        <strong class="strong">Remarkably resistant.</strong>
+                        <br>
+                        iPhone is splash, water
+                        <br>
+                        and dust resistant. What
+                        <br>
+                        a relief.
+                    </p>
+                </div>
+            </div>
+            <div class="inner-icons-container">
+                <div>
+                    <img src="./assets/icons/phone-layer.png" alt="phone-layer">
+                </div>
+                <div>
+                    <p class="gray-text reveal">
+                        <strong class="strong">Truly tough.</strong>
+                        <br>
+                        The aerospace-grade
+                        <br>
+                        aluminium enclosure is
+                        <br>
+                        super strong and light.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-cam-div">
+        <h4 style="padding: 0 10rem;" class="reveal">
+            All-new 48MP Main camera.
+            <br>
+            For breathtaking, 
+            <br>
+            smile-making picture taking.
+        </h4>
+        <div class="main-vid-container" style="height: fit-content;">
+            <video autoplay muted src="./assets/videos/main-cam.mp4" height="100%" width="100%" alt="main-cam-video" class="main-cam-video"></video>
+            <div class="text-content-shadow">
+                <div class="shadow-left">
+                    <p class="gray-text reveal">
+                        Now the Main camera shoots in super-high resolution. 
+                        So it’s easier than ever to 
+                        <strong class="strong">take standout photos with amazing detail</strong>
+                        — from snapshots to stunning landscapes.
+                    </p>
+                </div>
+                <div>
+                    <p class="gray-text reveal">Up to</p>
+                    <h2 class="reveal">4x resolution</h2>
+                    <p class="gray-text reveal">to capture incredible detail</p>
+                    <h2 style="padding-top: 5rem;" class="reveal">2x Telephoto</h2>
+                    <p class="gray-text reveal">is like having a third camera</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- -----------------------FOCUS SECTION------------------------ -->
+    <section class="focus-section">
+        <div class="text-div">
+            <h4 class="reveal">
+                Focus‑pocus, 
+                <br>
+                magical new portraits.
+            </h4>
+            <p class="gray-text reveal" style="margin-top: 2rem;">
+                More detail and richer colour make a dramatic difference<br>in your portraits. And now you can tap to<strong class="strong">shift the focus between subjects — even after you take the shot.</strong><br>Presto chango.
+            </p>
+        </div>
+        <div class="main-vid-container" style="max-width: 80%;margin-left: 10%;">
+            <video src="./assets/videos/focus.mp4" autoplay alt="focus-video" height="100%" width="100%"></video>
+        </div>
+        <div class="potrait-img-container">
+            <img src="./assets/slider/portrait_mode.jpg" alt="portrait_mode" class="main-cam-video">
+        </div>
+        <p class="gray-text reveal focus-p">
+            Want to quickly capture the moment before it’s gone? 
+            <strong class="strong">You no longer have to switch to Portrait mode.</strong>
+             If your subject is a person, dog or cat, iPhone 15 automatically captures depth information.
+             So you can choose to instantly see your photo as a portrait, with an artful blur effect. Or later in the Photos app.
+        </p>
+        <h2 style="margin-left: 22%;margin-top: 0 !important;" class="reveal">2x Telephoto</h2>
+        <p class="reveal gray-text" style="margin-left: 22%;">to frame the perfect portrait</p>
+    </section>
+    <!-- ---------------SLIDER POTRAITS--------- -->
+    <section>
+        <div class="potrait-slider-container" data-snap-slider="basic-example">
+            <div class="slider-item"><img src="./assets/slider/slide1.jpg" alt="slide-1" class="slider-img"></div>
+            <div class="slider-item"><img src="./assets/slider/slide2.jpg" alt="slide-2" class="slider-img"></div>
+            <div class="slider-item"><img src="./assets/slider/slide3.jpg" alt="slide-3" class="slider-img"></div>
+            <div class="slider-item"><img src="./assets/slider/slide4.jpg" alt="slide-4" class="slider-img"></div>
+            <div class="slider-item"><img src="./assets/slider/slide5.jpg" alt="slide-5" class="slider-img"></div>
+            <div class="slider-item"><img src="./assets/slider/slide6.jpg" alt="slide-6" class="slider-img"></div>
+            <div class="slider-item"><img src="./assets/slider/slide7.jpg" alt="slide-7" class="slider-img"></div>            
+        </div>
+    </section>
+
+    <!-- -----------Battery------------------------ -->
+    <section class="battery-section">
+        <h4 style="padding-left: 20%;padding-top: 10%;">
+            All-day battery life. 
+            <br>
+            For all the things you 
+            <br>
+            want to keep doing.</h4>
+    </section>
+
+
+
+    <!-- ------------------------js------------------------ -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <!-- -------------------------Scripts------------------ -->
@@ -196,24 +376,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
     <script src="https://unkpg.com/split-type"></script>
-    <script src="https://www.unpkg.com/split-type@0.3.4/umd/index.min.js"></script>    <script>
+    <script src="https://www.unpkg.com/split-type@0.3.4/umd/index.min.js"></script>    
+    <script>
         window.onload = function() {
             gsap.registerPlugin(ScrollTrigger)
-            const splitTypes = document.querySelectorAll(".spn-text")
+            const splitTypes = document.querySelectorAll(".reveal")
             splitTypes.forEach((char,i)=>{
                 const text = new SplitType(char,{types:'chars,words'})
                 
                 gsap.from( text.chars,{
                     scrollTrigger:{
                         trigger:char,
-                        start:`top ${80-i*20}%`,
+                        start:"top 80%",
                         end:"top 20%",
                         scrub:true,
                         markers:false,
                     },
                     opacity:0,
                     y: "100%",
-                    delay:i*0.5,
                 })
             })
             const lenis = new Lenis()
@@ -226,5 +406,6 @@
             requestAnimationFrame(raf)
         }
     </script>
+
 </body>
 </html>
