@@ -103,16 +103,14 @@ document.addEventListener("DOMContentLoaded", function() {
 // ------------------Colors---------------------
 const colorOptions = document.querySelectorAll('.color-option');
 const model = document.querySelector(".car");
-let images = ["black","pink","yellow","green","blue"];
+let images = ["all","black","pink","yellow","green","blue"];
 let imgContainer = document.querySelector(".img-clr-container");
 let img = document.getElementById("colors-img");
+let video = document.querySelector(".car")
 const spantxt = document.querySelector(".colors-text")
-console.log(spantxt)
 
 colorOptions.forEach((colorOption,i) => {
     colorOption.addEventListener('click', function() {
-        console.log(`Index:${i}`)
-        console.log(imgContainer)
         colorOptions.forEach(option => {
             option.classList.remove('color-active');
             option.parentNode.style.border = "none";       
@@ -121,19 +119,68 @@ colorOptions.forEach((colorOption,i) => {
         colorOption.classList.add('color-active');
         console.log(colorOption.parentNode)
         colorOption.parentNode.style.border = "2px solid #0D78E4";       
-
-        if (i === 0) {
+        spantxt.textContent = `15.54 cm (6.1”) iPhone 15 in ${images[i]}`
+        if (i === 0 || i===1) {
+            if( i===1){
+                video.src = "./assets/iphone-15/scene.gltf"
+            }else{
+                video.src = "./assets/iphone-model/scene.gltf"
+            }
             model.style.display = "block";
             imgContainer.style.display = "none";
             spantxt.style.bottom = "120px"
         } else {
             model.style.display = "none";
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll(".slide");
+    const prevBtn = document.getElementById("back");
+    const nextBtn = document.getElementById("front");
+    let currentSlide = 0;
+
+    // Show initial slide
+    showSlide(currentSlide);
+
+    // Button event listeners
+    prevBtn.addEventListener("click", showPrevSlide);
+    nextBtn.addEventListener("click", showNextSlide);
+
+    // Function to show previous slide
+    function showPrevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    }
+
+    // Function to show next slide
+    function showNextSlide() {
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+    }
+
+    // Function to show slide by index
+    function showSlide(index) {
+        slides.forEach((slide, idx) => {
+            slide.style.transform = `translateX(-${index * 100}%)`; // Slide to the right
+        });
+
+        // Disable/enable buttons accordingly
+        prevBtn.disabled = index === 0;
+        nextBtn.disabled = index === slides.length - 1;
+    }
+
+    // Clicking on the image slides to the right
+    const images = document.querySelectorAll(".inner-slide img");
+    images.forEach((image) => {
+        image.addEventListener("click", showNextSlide);
+    });
+});
             imgContainer.style.display = "block";
             let path = `./assets/phone-colors/${images[i]}.jpg`
             img.src = path; 
-            spantxt.textContent = `15.54 cm (6.1”) iPhone 15 in ${images[i]}`
             spantxt.style.bottom = "180px"
-            console.log(spantxt.textContent)
         }
     });
 });
@@ -143,9 +190,9 @@ const colorsContainer = document.querySelector('.colors');
 window.addEventListener('scroll', function() {
     const section = document.querySelector('.model');
     const sectionTop = section.getBoundingClientRect().top+500;
-    // const windowHeight = window.innerHeight;
-
-    if ( sectionTop > 300 && sectionTop>0) {
+    //const windowHeight = window.innerHeight;
+    console.log(window.scrollY)
+    if ( sectionTop > 300 && window.scrollY>2100) {
         colorsContainer.style.visibility = "visible";
         colorsContainer.classList.remove("hidden");
     } else {
@@ -153,68 +200,25 @@ window.addEventListener('scroll', function() {
         colorsContainer.classList.add("hidden");
     }
 });
-// ---------------Potrait Slider----------
-// const sliderContainer = document.querySelector('.potrait-slider-container');
+// -----------------------ACCORDIAN--------------
+document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll(".accordion");
+    const contents = document.querySelectorAll(".accordion-content");
+    const accordianImage = document.querySelector(".accordian-img");
 
-// let focusedIndex = 0;
+    accordions.forEach(function(accordion) {
+        const header = accordion.querySelector(".accordion-header");
+        const content = accordion.querySelector(".accordion-content");
+        
 
-// function updateSlider() {
-//     const items = document.querySelectorAll('.slider-item');
-//     items.forEach((item, index) => {
-//         if (index === focusedIndex) {
-//             item.classList.add('focused');
-//             item.classList.remove('overlay');
-//         } else {
-//             item.classList.remove('focused');
-//             item.classList.add('overlay');
-//         }
-//     });
-// }
-
-// function handleSwipe(direction) {
-//     if (direction === 'right') {
-//         focusedIndex = (focusedIndex + 1) % items.length;
-//     } else if (direction === 'left') {
-//         focusedIndex = (focusedIndex - 1 + items.length) % items.length;
-//     }
-//     updateSlider();
-// }
-
-// sliderContainer.addEventListener('touchstart', handleTouchStart, false);
-// sliderContainer.addEventListener('touchmove', handleTouchMove, false);
-
-// let xDown = null;
-// let yDown = null;
-
-// function handleTouchStart(event) {
-//     const firstTouch = event.touches[0];
-//     xDown = firstTouch.clientX;
-//     yDown = firstTouch.clientY;
-// }
-
-// function handleTouchMove(event) {
-//     if (!xDown || !yDown) {
-//         return;
-//     }
-
-//     const xUp = event.touches[0].clientX;
-//     const yUp = event.touches[0].clientY;
-
-//     const xDiff = xDown - xUp;
-//     const yDiff = yDown - yUp;
-
-//     if (Math.abs(xDiff) > Math.abs(yDiff)) {
-//         /* Most significant */
-//         if (xDiff > 0) {
-//             /* left swipe */
-//             handleSwipe('left');
-//         } else {
-//             /* right swipe */
-//             handleSwipe('right');
-//         }
-//     }
-//     /* reset values */
-//     xDown = null;
-//     yDown = null;
-// }
-// -----------Modern---------------
+        header.addEventListener("click", function() {
+            // accordianImage.classList.remove("animateDown");
+            contents.forEach((content)=>content.classList.remove("active-accordian"));
+            content.classList.add("active-accordian")
+            const imageURL = accordion.dataset.image;
+            accordianImage.src = imageURL;
+            // accordianImage.classList.remove("animateDown");        });
+        });
+    })
+});
+// ------------Button Slider--------------

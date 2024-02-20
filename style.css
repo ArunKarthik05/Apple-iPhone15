@@ -2,15 +2,16 @@ html{
     font-size: 10px;
 }
 body{
-    cursor: url("./pointer.png"),auto;
     margin: 0;
     padding: 0;
     cursor: none;
     font-family: var(--para-font);
+    box-sizing: border-box;
 }
 /* ------------------REUSABLE STYLES------------ */
 :root {
     --h2-header-fs: 56px;
+    --h3-fs : 64px;
     --header-fw: 600;
     --h4-header-fs: 80px;
     --para-fs: 21px;
@@ -29,13 +30,18 @@ h2{
     font-weight: var(--header-fw);
     margin-left: 5%;
 }
+h3{
+    font-size: var(--h3-fs);
+    font-weight: var(--header-fw);
+    margin: 0;
+}
 h4{
     margin: 0;
     font-size: var(--h4-header-fs);
     font-weight: var(--header-fw);
 }
 section{
-    margin-top: 30%;
+    margin-top: 20%;
 }
 .cursor-dot{
     width: 5px;
@@ -303,7 +309,7 @@ nav ul li {
     z-index:1;
 }
 .dyi-slide-1{
-    top: 33.5%;
+    top: 27.5%;
     left: 30%;
     z-index: 1;
     position: absolute;
@@ -417,7 +423,7 @@ nav ul li {
     background-color: rgba(255, 255, 255, 0.7); /* White color with 50% opacity */
     position: absolute;
     bottom: 120px;
-    left: 38%;
+    left: 45%;
     font-family: "SF Pro Text";
     font-weight: 500;
     font-size: 15px;
@@ -432,7 +438,7 @@ nav ul li {
     position: fixed;
     transform: translateY(0);
     bottom: 20px;
-    left: 40%;
+    left: 42%;
     display: flex;
     max-width: fit-content;
     border-radius: 2rem;
@@ -543,7 +549,7 @@ nav ul li {
     margin-top: 48%;
 }
 .text-div{
-    padding-top: 20rem;
+    /* padding-top: 20rem; */
     margin: 15rem 0 0 25rem ;
     /* background-color: red; */
 }
@@ -597,7 +603,7 @@ nav ul li {
 }
 .text-content-shadow {
     max-width: 90%;
-    /* background-color: red; */
+    /* background-color: blue; */
     position: absolute;
     bottom: 50px;
     display: flex;
@@ -648,11 +654,13 @@ nav ul li {
     margin-left: 25%;
     /* background-color: red; */
     height: 40%;
-    min-width:fit-content;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 .potrait-slider-container .slider-item:last-child {
     margin-right: 20vw;
+}
+.potrait-slider-container::-webkit-scrollbar {
+    display: none;
 }
 .slider-item {
     height: 60%;
@@ -681,7 +689,215 @@ nav ul li {
 }
 /* -----------BATTERY-------------- */
 .battery-section{
+    /* background-color: red; */
+    position: relative;
+    max-height: fit-content;
+}
+.battery-flex-container{
+    /* background-color: blue; */
+    min-width: 65%;
+    left:25%;
+    bottom: -50px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.line{
+    width: 30rem;
+    height: 0.1rem;
+    background-color: black;
+}
+.inner-flex{
+    display: flex;
+    margin-top: 2rem;
+    min-width: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+.bio-chip-section{
+    margin-top: 40vh !important;
+    background-color: black;
+    color: white;
+    max-height: fit-content;
+}
+.header-div{
+    margin: 100px; 
+    /* background-color: red; */
+    max-width: 80%;
+    min-height: 200px;
+}
+.row-flex{
+    /* background-color: red; */
+    max-width: 30%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+}
+.usb-main-container{
     min-height: 100vh;
-    min-width: 100vw;
-    background-color: red;
+    /* background-color: red; */
+}
+.usb-img{
+    margin-left: -8%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.images-section{
+    min-height: 200vh;
+    background-color: #F5F5F7;
+    margin: 0px !important;
+}
+.inner-images-container{
+    padding: 10rem 10rem 0 10rem;
+}
+.images-section .images-sec-container:nth-child(2), .images-sec-container:nth-child(3) {
+    background-color: white;
+    max-height: fit-content;
+}
+.images-sec-container{
+    height: 100% ;
+    margin: 100px;
+    padding-bottom: 15rem;
+    background-color: black;
+}
+.images-section-img{
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.line-long{
+    margin-top: 6rem;
+    height: 0.1rem;
+    background-color: gray;
+}
+.ios-row{
+    padding: 0 4rem;
+    /* max-width: 90% !important;  */
+    margin-left: 0 !important;
+    display: grid;
+    gap: 8rem;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.ios-row p{
+    font-size: 18px !important;
+}
+/* -----------ACCORDIAN------------ */
+.accordian-outermost{
+    background-color: #F5F5F7;
+    margin: 5rem;
+    border-radius: 5rem;
+    min-height: 100vh;
+}
+.accordian-main-container{
+    position: relative;
+    top: 100px;
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+.accordian-main-container h5{
+    margin: 1rem 0 2rem 0 !important;
+}
+.accordian-main-container p{
+    color: gray;
+    line-height: 1.5;
+    font-size: 18px !important;
+    font-weight: normal !important;
+}
+.accordion-content{
+    max-width: 60%;
+    /* background-color: green; */
+    display: none;
+}
+.accordian-right{
+    /* background-color: yellow; */
+    overflow: hidden;
+}
+.accordian-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.active-accordian{
+    display: block !important;
+    animation: easeDown 1.5s forwards;
+}
+.animateDown{
+animation: easeDown 0.5s ease-in-out; 
+}
+@keyframes easeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-1%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.shop-slider{
+    min-height: 100vh;
+    /* background-color: red; */
+}
+.slides-shop h3{
+    padding: 2rem 0;
+    font-size: 28px !important;
+}
+.slides-shop::-webkit-scrollbar {
+    display: none;
+}
+.slides-shop{
+    overflow-x: scroll;
+    display: flex;
+    /* background-color: green; */
+    height: 35rem;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    gap: 3rem;
+}
+.slide{
+    position: relative;
+    background-color: blue;
+    min-width: 300px;
+    background-color: white;
+    margin: 2rem;
+    border-radius: 3rem;
+}
+.inner-slide{
+    min-height: 80%;
+    /* background-color: red; */
+    margin: 2rem;
+}
+.slide button{
+    position: absolute;
+    bottom:5%;
+    border: none;
+    background-color: rgb(51,51,54);
+    color: lightcyan;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateX(230px);
+    font-size: 35px;
+    font-weight: 600;
+
+}
+.btn-container button{
+    padding: 0.5rem 0.7rem;
+    border-radius: 50%;
+    border: none;
+}
+.inner-slide span{
+    color: gray;
+    font-size: 17px;
 }

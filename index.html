@@ -68,7 +68,7 @@
     </div>
     <section class="welcome">
         <div class="vid-container">
-            <video autoplay muted class="video-nav" height="90%" width="100%">
+            <video loop autoplay muted class="video-nav" height="90%" width="100%">
                 <source src="./assets/nav/large.mp4">
             </video>    
         </div>
@@ -115,7 +115,7 @@
                     stays on top of it all.
                 </p>
                 <div class="dyi-inner-container-1">
-                    <video autoplay muted alt="dyi-1" class="dyi-slide-1">
+                    <video loop autoplay muted alt="dyi-1" class="dyi-slide-1">
                         <source src="./assets/dynamic-island/video-1.mp4">
                     </video>
                     <!-- <img src="./assets/dynamic-island/dyi-1-start.jpg" > -->
@@ -140,7 +140,7 @@
                         <br>
                         and aluminium design.
                     </p>
-                    <video autoplay muted alt="dyi-3" class="dyi-slide-3">
+                    <video loop autoplay muted alt="dyi-3" class="dyi-slide-3">
                         <source src="./assets/dynamic-island/video-2.mp4">
                     </video>  
                 </div>
@@ -167,11 +167,17 @@
                 <img src="" alt="" id="colors-img">
             </div>
             <span class="colors-text">15.54 cm (6.1”) iPhone 15 in black</span>
-            <model-viewer class="car" src="./assets/iphone-15/scene.gltf" alt="truck-3d" shadow-intensity="0.8" auto-rotate camera-controls="orbit">
+            <model-viewer class="car" src="./assets/iphone-model/scene.gltf" alt="truck-3d" shadow-intensity="0.8" auto-rotate style="margin-left: 10%;">
             </model-viewer>
             <div class="colors">  
                 <div class="outer-circle" style="border:2px solid #0D78E4">
-                    <div class="color-option abs color-active" style="background-color: black;"></div>
+                    <div class="color-option abs color-active" style="background-color: #EEEDC9;"></div>
+                </div> 
+                <div class="outer-circle">
+                    <div class="color-option abs" style="background-color:black;"></div>
+                </div> 
+                <div class="outer-circle">
+                    <div class="color-option abs" style="background-color: rgb(150, 125, 125);"></div>
                 </div> 
                 <div class="outer-circle">
                     <div class="color-option abs" style="background-color: pink;"></div>
@@ -210,9 +216,9 @@
                     </p>
                 </div>
                 <div class="DYI-vid-container">
-                    <img src="./assets/videos/DYI-bg.png" alt="DYI-bg" class="DYI-bg">
+                    <img autoplay src="./assets/videos/DYI-bg.png" alt="DYI-bg" class="DYI-bg">
                     <div class="DYI-vd-container">
-                        <video autoplay muted src="./assets/videos/AP-Dhillion.mp4" class="video-DYI"></video>
+                        <video loop autoplay muted src="./assets/videos/AP-Dhillion.mp4" class="video-DYI"></video>
                     </div>                    
                 </div>
             </div>
@@ -232,12 +238,12 @@
             </p>
         </div>
         <div class="gray-section-vc" style="position: relative;margin-left: 10%;margin-top: 10%;">
-            <video autoplay src="./assets/videos/gray-section.mp4" class="gray-video" width="100%" height="100%" ></video>
+            <video src="./assets/videos/gray-section.mp4" autoplay loop muted class="gray-video" width="100%" height="100%" ></video>
         </div>
 
         <div class="main-icons-container">
             <div class="inner-icons-container">
-                <div>
+                <div class="reveal-div">
                     <img src="./assets/icons/shield.png" alt="shield">
                 </div>
                 <div>
@@ -253,7 +259,7 @@
                 </div>
             </div>
             <div class="inner-icons-container">
-                <div>
+                <div class="reveal-div">
                     <img src="./assets/icons/water.png" alt="water">
                 </div>
                 <div>
@@ -269,7 +275,7 @@
                 </div>
             </div>
             <div class="inner-icons-container">
-                <div>
+                <div class="reveal-div">
                     <img src="./assets/icons/phone-layer.png" alt="phone-layer">
                 </div>
                 <div>
@@ -295,7 +301,7 @@
             smile-making picture taking.
         </h4>
         <div class="main-vid-container" style="height: fit-content;">
-            <video autoplay muted src="./assets/videos/main-cam.mp4" height="100%" width="100%" alt="main-cam-video" class="main-cam-video"></video>
+            <video autoplay muted loop src="./assets/videos/main-cam.mp4" height="100%" width="100%" alt="main-cam-video" class="main-cam-video"></video>
             <div class="text-content-shadow">
                 <div class="shadow-left">
                     <p class="gray-text reveal">
@@ -328,7 +334,7 @@
             </p>
         </div>
         <div class="main-vid-container" style="max-width: 80%;margin-left: 10%;">
-            <video src="./assets/videos/focus.mp4" autoplay alt="focus-video" height="100%" width="100%"></video>
+            <video autoplay muted loop src="./assets/videos/focus.mp4" alt="focus-video" height="100%" width="100%"></video>
         </div>
         <div class="potrait-img-container">
             <img src="./assets/slider/portrait_mode.jpg" alt="portrait_mode" class="main-cam-video">
@@ -357,14 +363,218 @@
 
     <!-- -----------Battery------------------------ -->
     <section class="battery-section">
-        <h4 style="padding-left: 20%;padding-top: 10%;">
+        <h4 style="padding-left: 20%;padding-top: 10%;padding-bottom: 5%;" class="reveal">
             All-day battery life. 
             <br>
             For all the things you 
             <br>
             want to keep doing.</h4>
+            <img src="./assets/images/battery.jpg" alt="">
+            <div class="battery-flex-container">
+                <div>
+                    <p class="gray-text reveal">Up to</p>
+                    <h4 class="reveal">26 hours</h4>
+                    <p class="gray-text reveal">video playback on iPhone 15 Plus</p>
+                    <p class="gray-text reveal" style="margin-top: 2rem;">Up to</p>
+                    <h4 class="reveal">20 hours</h4>
+                    <p class="gray-text reveal">video playback on iPhone 15</p>
+                </div>
+                <div>
+                    <div class="line reveal-div"></div>
+                    <div class="inner-flex">
+                        <img class="reveal-div" src="./assets/icons/icon_iphone.png" alt="icon_iphone" width="40px" height="40px">
+                        <p class="gray-text reveal" style="margin-top: 2rem;">Up to 3 additional hours <br/> of video playback<br/> compared to iPhone 12</p>
+                    </div>
+                   
+                </div>
+            </div>
     </section>
+    <!-- ------------BIOCHIP--------------- -->
+    <div class="bio-chip-section">
+        <header class="header-div">
+            <h4 class="reveal" style="margin-left: 20%;padding-top: 100px;">A16 Bionic chip.<br/> A Pro-proven<br/>powerhouse.</h4>
+        </header>
+        <div class="main-vid-container" style="margin-left: 10%;">
+            <video autoplay muted src="./assets/videos/chip.mp4" alt="chip-video"></video>
+        </div>
+        <div>
+            <div>
+                <p class="reveal gray-text" style="margin-left: 5%;text-align: center;">
+                    <span style="color: white;">A16 Bionic powers all kinds of advanced features.</span>Like computational<br/> photography used for 24MP photos and next-generation portraits.<br/> Voice Isolation for phone calls. And smooth performance for<br/>graphics-intensive games. All with incredible efficiency for great<br/>battery life. No wonder it started as a Pro chip.   
+                </p>
+            </div>
+            <div class="line reveal-div" style="background-color: white !important;margin-left: 35%;margin-top: 3rem;"></div>
+            <div class="row-flex">
+                <div >
+                    <img class="reveal-div" src="./assets/icons/icon-phone-white.png" alt="icon_iphone" width="40px" height="40px" style="color: white;">
+                </div>
+                <div>
+                    <p class="gray-text reveal" style="margin-top: 2rem;">The A16 Bionic GPU is<br/>up to 40% faster than<br/>the GPU in iPhone 12</p>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!-- ------------------USB--------------- -->
+    <div class="usb-main-container">
+        <div class="text-div" style="padding-top: 10rem !important;">
+            <h4 class="reveal">USB-C<span style="color: gray;">ompatible.</span></h4>
+            <p style="margin-top: 2rem;">The new USB-C connector lets you charge your Mac or iPad with the<br>same cable you use to charge iPhone 15. You can even use iPhone 15<br>to charge Apple Watch or AirPods.5 Bye-bye, cable clutter.</p>
+        </div>
+        <div style="max-height: 100%;min-width: 100%;overflow: hidden;margin-top: 7rem;"><img src="./assets/images/usb.png" alt="usb" class="usb-img"></div>
+    </div>
+    <div class="images-section">  
+            <div class="images-sec-container"><img src="./assets/images/safety.jpg" alt="safety" class="images-section-img">
+            <p class="gray-text reveal" style="margin:10% 0 0 10%;">iPhone also has <span style="color: rgb(255, 255, 255);">Crash Detection</span> a vital feature that has helped save lives</p>
+            </div>
+            <div class="images-sec-container">
+                <div class="inner-images-container">
+                    <img src="./assets/icons/images-recycle.jpg" alt="images-recycle">
+                    <h2 style="margin: 0 !important;">Designed to make a<br>difference.</h2>
+                    <div class="line-long"></div>
+                    <div class="row-flex" style="margin-left: 0 !important;padding: 2rem;min-width: 100% !important;justify-content: space-between !important;">
+                        <div style="max-width: 45% !important;line-height: 1.5;"><p class="reveal gray-text" style="font-size: 18px !important;"><span style="color: black;">What matters to you matters to Apple too.</span>From privacy protections that give you more control over your data. To using more recycled materials that minimise environmental impact. To creating built-in features that make iPhone accessible to all.</p></div>
+                        <div style="padding:2rem ; margin-left: 10%;">
+                            <p class="gray-text reveal">The enclosure of iPhone 15 has</p>
+                            <h3 style="font-size: 48px; margin: 0 !important;" class="reveal">75% recycled aluminium</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------- -->
+            <div class="images-sec-container">
+                <div class="inner-images-container">
+                    <div>
+                        <h3 class="gray-text reveal">iOS 17.</h3>
+                        <h2 style="margin: 0 !important;" class="reveal">Style it out. Swap it over.<br/>Sticker it up.<br/></h2>
+                    </div>
+                    <img src="./assets/images/ios17.jpg" alt="ios17" style="padding: 5rem;">
+                    <div class="ios-row">
+                        <div><p class="gray-text reveal"><span style="color: black;">Contact Poster.</span> Create your own poster that contacts will see when you call. Pick a favourite pic or Memoji, pair it with a favourite font and there you have it — your very own calling card.</p></div>
+                        <div><p class="gray-text reveal"><span style="color: black;">NameDrop.</span> Want to swap contact info with someone? Just bring your iPhone close to theirs. You can both choose what you want to share, and the information transfers instantly.</p></div>
+                        <div><p class="gray-text reveal"><span style="color: black;">Live Stickers.</span> Touch and hold an object in a photo to lift it from the background and create a sticker. Add effects like Puffy and Shiny. Or create animated stickers from Live Photos.</p></div>
+                    </div>
+                </div>
+            </div>
+            <!-- --------------------------------- -->
+            <div class="images-sec-conatiner" style="background-color: white;">
+                <h2 class="reveal" style="padding-top: 10rem !important;">Significant others.</h2>
+                <div class="accordian-outermost">
+                    <div class="accordian-main-container">
+                        <div class="accordion-left" style="max-width: 50%;">
+                                <div class="accordion" data-image="./assets/images/watch.jpg">
+                                    <div class="accordion-header">
+                                        <h5 style="font-size: 32px;">iPhone and Apple Watch<span class="material-symbols-outlined">
+                                            expand_more
+                                        </span>
+                                    </h5>                                   
+                                    </div>
+                                    <div class="accordion-content active-accordian">
+                                        <p>Misplaced your iPhone? The latest Apple Watch models can show you its approximate distance and direction.14 To set up a group photo on your iPhone, join the group and use Apple Watch as a viewfinder to snap the shot. And, when you take a call on your Apple Watch, just tap your iPhone to continue the conversation there.</p>
+                                    </div>
+                                </div>
+                                <div class="line" style="margin-top: 3rem;background-color: lightgray;"></div>
+                                <div class="accordion" data-image="./assets/images/mac.jpg">
+                                    <div class="accordion-header">
+                                        <h5 style="font-size: 32px;">iPhone and Mac<span class="material-symbols-outlined">
+                                            expand_more
+                                        </span>
+                                    </h5>                                   
+                                  </div>
+                                    <div class="accordion-content">
+                                        <p>You can answer calls or messages from your iPhone directly on your Mac. Copy images, video or text from your iPhone, then paste into another app on your nearby Mac. And with iCloud, you can access your favourite files from either your iPhone or Mac.</p>
+                                    </div>
+                                </div>
+                                <div class="line" style="margin-top: 3rem;background-color: lightgray;"></div>
+                                <div class="accordion" data-image="./assets/images/airpods.jpg">
+                                    <div class="accordion-header">
+                                        <h5 style="font-size: 32px;">iPhone and AirPods<span class="material-symbols-outlined">
+                                            expand_more
+                                        </span></h5>
+                                    </div>
+                                    
+                                    <div class="accordion-content">
+                                        <p>Set up AirPods on iPhone with just
+                                            a tap. You’ll love Adaptive Audio, which automatically tailors the noise control to provide the best listening experience across different environments and interactions throughout the day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="accordian-right">
+                            <img src="./assets/images/airpods.jpg" alt="accordian-image" class="accordian-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- -------------------------------------->
+    </div>
 
+    <section class="shop-slider"> 
+        <div style="display: inline-flex;justify-content: space-between;min-width: 100%;">
+            <h2 class="reveal">Ways to shop and save at Apple.</h2>
+            <p style="color: #2D81D4;padding: 6rem;" class="">Shop iPhone
+            <span class="material-symbols-outlined" id="icons" style="color:#2D81D4;">
+                chevron_right
+            </span>
+            </p>
+        </div>
+        <div class="slides-shop">
+            <div class="slide">
+                <div class="inner-slide">
+                    <img src="./assets/icons/trade.png" alt="trade">
+                    <h3>
+                        Save with <br>Apple Trade In.
+                    </h3>
+                    <span>
+                        Get ₹17500.00–₹62300.00 in credit towards iPhone 15 or iPhone 15 Pro when you trade in iPhone 11 or higher
+                    </span>
+                </div>
+                <button>+</button>
+            </div>
+            <div class="slide">
+                <div class="inner-slide">
+                    <img src="./assets/icons/card.png" alt="card">
+                    <h3>Monthly payment <br> options available.</h3>
+                    <span>Choose the easy way to finance with convenient monthly payment options.</span>
+                </div>
+                <button>+</button>
+            </div>
+            <div class="slide">
+                <div class="inner-slide">
+                    <img src="./assets/icons/delivery.png" alt="delivery">
+                    <h3>Get flexible delivery and easy pickup.</h3>
+                    <span>Get free delivery or pickup at your Apple Store.</span>
+                </div>
+                <button>+</button>
+            </div>
+            <div class="slide">
+                <div class="inner-slide">
+                    <img src="./assets/icons/personal.png" alt="personal">
+                    <h3>Get to know your new iPhone.</h3>
+                    <span>Learn how to get the most out of your new iPhone with a free one‑on‑one Personal Session.</span>
+                </div>
+                <button>+</button>
+            </div>
+            <div class="slide">
+                <div class="inner-slide">
+                    <img src="./assets/icons/specialist.png" alt="specialist">
+                    <h3>Shop one on one with a Specialist.</h3>
+                    <span>Online or in a store.</span>
+                </div>
+                <button>+</button>
+            </div>
+        </div>
+        <div style="transform: translateX(90%);" class="btn-container">
+            <button>
+                <span class="material-symbols-outlined" id="back">
+                    arrow_back_ios_new
+                </span>
+            </button>
+            <button>
+                <span class="material-symbols-outlined" id="front" style="rotate: 180deg;">
+                    arrow_back_ios_new
+                </span>
+            </button>
+        </div>
+    </section>
 
 
     <!-- ------------------------js------------------------ -->
@@ -387,6 +597,20 @@
                 gsap.from( text.chars,{
                     scrollTrigger:{
                         trigger:char,
+                        start:"top 80%",
+                        end:"top 20%",
+                        scrub:true,
+                        markers:false,
+                    },
+                    opacity:0,
+                    y: "100%",
+                })
+            })
+            const divs = document.querySelectorAll(".reveal-div");
+            divs.forEach((div)=>{
+                gsap.from( div,{
+                    scrollTrigger:{
+                        trigger:div,
                         start:"top 80%",
                         end:"top 20%",
                         scrub:true,
