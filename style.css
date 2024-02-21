@@ -847,6 +847,7 @@ animation: easeDown 0.5s ease-in-out;
 }
 .shop-slider{
     min-height: 200vh;
+    padding-bottom: 5rem;
     background-color: #F5F5F7;
 }
 .slides-shop h3{
@@ -958,9 +959,10 @@ animation: easeDown 0.5s ease-in-out;
     /* background-color: orange; */
 }
 .footer-main{
+    margin-top: 10rem;
     min-height: 200vh;
-    background-color: red;
-    /* background-color: #F5F5F7; */
+    /* background-color: red; */
+    background-color: #F5F5F7;
 }
 .footer-top{
     padding-top: 20%;
@@ -976,8 +978,66 @@ animation: easeDown 0.5s ease-in-out;
     font-size: 28px;
 }
 h5{
+    font-size: 15px;
+}
+.terms-and-conditions{
+    margin: 12rem 12rem 2rem 12rem;
+    min-height: 100vh;
+    font-size: 12px;
+    /* background-color: blue; */
+}
+.terms-and-conditions span{
+    line-height: 1.5;
+}
+.footer-bottom{
+    /* background-color: red; */
+    min-height: fit-content;
+    margin:0 9% ;
+}
+.img-footer-div{
+    max-height: 10rem;
+    /* background-color: blue; */
+    display: inline-flex;
+    align-items: center;
+}
+.img-footer-div span{
     font-size: 12px;
 }
-.h4-div>h4:first-child{
-    margin-top: 2rem !important;
+.footer-bottom-item{
+    /* background-color: blue; */
+    min-height: fit-content;
+    max-width: 15vw;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-bottom-item p{
+    line-height: 2;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+}
+.footer-item{
+    min-width: 100%;
+    /* background-color: yellow; */
+}
+.header-p{
+    font-weight: 600 !important;
+}
+.new{
+    margin-top: 2rem;
+}
+.footer-underline{
+    color: rgb(80, 152, 194);
+    text-decoration: underline;
+}
+.last-line-flex{
+    display: flex;
+}
+.last-line-flex div{
+    margin-right: 10%;
+}
+.last-line-flex p{
+   margin-top: 3rem;
+    font-size: 12px;
+    color: gray;
 }
