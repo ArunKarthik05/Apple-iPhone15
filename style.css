@@ -7,6 +7,7 @@ body{
     cursor: none;
     font-family: var(--para-font);
     box-sizing: border-box;
+    overflow: hidden;
 }
 /* ------------------REUSABLE STYLES------------ */
 :root {
@@ -845,8 +846,8 @@ animation: easeDown 0.5s ease-in-out;
     }
 }
 .shop-slider{
-    min-height: 100vh;
-    /* background-color: red; */
+    min-height: 200vh;
+    background-color: #F5F5F7;
 }
 .slides-shop h3{
     padding: 2rem 0;
@@ -858,7 +859,7 @@ animation: easeDown 0.5s ease-in-out;
 .slides-shop{
     overflow-x: scroll;
     display: flex;
-    /* background-color: green; */
+    margin-left: 5rem;  
     height: 35rem;
     display: flex;
     flex-direction: row;
@@ -867,7 +868,6 @@ animation: easeDown 0.5s ease-in-out;
 }
 .slide{
     position: relative;
-    background-color: blue;
     min-width: 300px;
     background-color: white;
     margin: 2rem;
@@ -900,4 +900,84 @@ animation: easeDown 0.5s ease-in-out;
 .inner-slide span{
     color: gray;
     font-size: 17px;
+}
+.inactive{
+    opacity: 0.5;
+    /* pointer-events: none; */
+}
+.explore-main-div{
+    border-radius: 5rem;
+    min-height: 200vh;
+    margin: 3rem;
+    background-color: white;
+}
+.text-box-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.learn-more-btn{
+    border: none;
+    padding: 1.3rem;
+    background-color: #0071E3;
+    border-radius: 3rem;
+    color: white;
+}
+.large{
+    min-width: 60%;
+    background-color: rgb(165, 160, 160);
+    margin-left: 20%;
+}
+.main-icons-flex{
+    display: flex;
+    justify-content: center;
+    gap:6rem;
+    min-height: fit-content;
+    max-width: 60%;
+    margin: 5rem 0 0 20%;
+    /* background-color: red; */
+    text-align: center;
+}
+.main-icons-flex p{
+    font-size: 28px;
+}
+.flex-left-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    min-width: 30%;
+    /* background-color: blue; */
+}
+.flex-right-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    min-width: 30%;
+    min-height: 100%;
+    /* background-color: orange; */
+}
+.footer-main{
+    min-height: 200vh;
+    background-color: red;
+    /* background-color: #F5F5F7; */
+}
+.footer-top{
+    padding-top: 20%;
+    margin-left: 0 0 0 5%;
+}
+.footer-top-flex{
+    display: flex;
+    gap: 14rem;
+    margin-left: 5%;
+}
+.footer-top-flex h4{
+    margin: 0 0 2rem 0;
+    font-size: 28px;
+}
+h5{
+    font-size: 12px;
+}
+.h4-div>h4:first-child{
+    margin-top: 2rem !important;
 }
